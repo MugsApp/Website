@@ -10,21 +10,24 @@ li {
     float: left;
 }
 
-li a {
+a {
     display: block;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     text-decoration: none;
 }
 
 li img{
     display: block;
     text-align: center;
-    padding: 20px;
+    padding-left: 50px;
+    padding: 5px;
+    height: 100%;
+    width: 50%;
 }
 
-li a:hover {
+a:hover {
     background-color: #111111;
 }
 
