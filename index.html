@@ -3,20 +3,83 @@
     <head>
         <title>Mugs</title>
         <link rel="stylesheet" href="styles.css">
-        <!-- <link rel="icon" href="mugs_icon.svg"> -->
+        <link rel="icon" href="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\icon\mugs website icon.svg">
     </head>
     <body>
         <ul>
-            <li><img src="mugs_logo.svg" alt="Mugs logo"></li>
+            <li><img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\logo\mugs_logo.svg" alt="Mugs logo"></li>
             <li style="float:right"><a href="#about">About Us</a></li>
             <li style="float:right"><a href="#contact">Contact Us</a></li>
         </ul>
-        <img src="playstore-1.png" alt="First image">
-        <img src="playstore-2.png" alt="Second image">
-        <img src="playstore-3.png" alt="Third image">
-        <img src="playstore-4.png" alt="Fourth image"><br>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 5</div>
+              <img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\poster\playstore-1.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 5</div>
+              <img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\poster\playstore-2.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 5</div>
+              <img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\poster\playstore-3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\poster\playstore-4.png" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="C:\Users\lenovo\OneDrive\Desktop\Mugs\Website\Images\poster\playstore-5.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              var dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                  dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+        <hr>
         <h3 id="contact">Contact Us</h3>
         <p>Email: soniaryan2001@gmail.com</p><br>
+        <hr>
         <h3 id="about">About Us</h3>
         <p>dfkfhghdfkjghfjkf</p>
         <p>fdiuhfhdsghldfjglfdhfhgfl</p>
