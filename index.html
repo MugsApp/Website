@@ -1,91 +1,98 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Mugs</title>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="icon" href="Images\icon\website_icon.svg">
-    </head>
-    <body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Mugs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    
+    <header>
+      <img src="images/logo/mugs_logo.svg" alt="logo">
+      <nav>
         <ul>
-            <li><img src="Images\logo\mugs_logo.svg" alt="Mugs logo"></li>
-            <li style="float:right"><a href="#about">About Us</a></li>
-            <li style="float:right"><a href="#contact">Contact Us</a></li>
+          <li><a href="#About">ABOUT</a></li>
+          <li><a href="#Contact">CONTACT</a></li>
         </ul>
-        <div class="slideshow-container">
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 5</div>
-              <img src="Images\poster\playstore-1.png" style="width:100%">
-            </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 5</div>
-              <img src="Images\poster\playstore-2.png" style="width:100%">
-            </div>
-          
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 5</div>
-              <img src="Images\poster\playstore-3.png" style="width:100%">
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 5</div>
-                <img src="Images\poster\playstore-4.png" style="width:100%">
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">5 / 5</div>
-                <img src="Images\poster\playstore-5.png" style="width:100%">
-            </div>
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        </div>
-        <br>
-
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-            <span class="dot" onclick="currentSlide(5)"></span>
+      </nav>
+    </header>
+    <section>
+      <br>
+      <h3 class="heading">Idea behind Mugs</h3>
+      <div class="iframe-container">
+        <iframe src="https://www.youtube.com/embed/K7uhGjsy5d8" width="300" height="169" frameborder="0"></iframe>
+      </div>
+      <h3 class="heading-1" id="About">How does it work</h3>
+      <div class="container">
+        <div class="mySlides fade">
+          <img src="images/poster/playstore-1.png" alt="poster-1">
         </div>
 
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active";
-            }
-        </script>
-        <hr>
-        <h3 id="contact">Contact Us</h3>
-        <p>Email: soniaryan2001@gmail.com</p><br>
-        <hr>
-        <h3 id="about">About Us</h3>
-        <p>dfkfhghdfkjghfjkf</p>
-        <p>fdiuhfhdsghldfjglfdhfhgfl</p>
-        <p>dhjgfdsgfgskfbdsknfdnkds</p>
-        <p>dbcjsdkvkdsbvkdsnvns</p>
-        <p>ddbfjdsdsbdskvbdskbvkds</p>
+        <div class="mySlides fade">
+          <img src="images/poster/playstore-2.png" alt="poster-2">
+        </div>
 
-    </body>
+        <div class="mySlides fade">
+          <img src="images/poster/playstore-3.png" alt="poster-3">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/poster/playstore-4.png" alt="poster-4">
+        </div>
+
+        <div class="mySlides fade">
+          <img src="images/poster/playstore-5.png" alt="poster-5">
+        </div>
+      </div>
+
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+
+      <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+      </script>
+      <div class="sticker">
+        <a href="https://play.google.com/store/apps/details?id=com.programmer.mugs&hl=en"><img src="images/sticker/playstore_sticker.png" alt="playstore sticker"></a>
+      </div>
+    </section>
+    <br>
+    <footer>
+      <h3 id="Contact">Contact</h3>
+      <br>
+      <div class="mail">
+        <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=mugs.main@gmail.com&body=contact-us-here"><img src="images/sticker/gmail_icon.png" alt="Gmail"></a>
+      </div>
+    </footer>
+  </body>
 </html>
