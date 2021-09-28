@@ -300,7 +300,7 @@ footer h3 {
     }
 
     .icons {
-        padding-left: 45%;
+        padding-left: 43.5%;
     }
 
     .fa {
@@ -313,6 +313,10 @@ footer h3 {
     }
 
     .fa-youtube {
+        vertical-align: middle;
+    }
+
+    .fa-linkedin {
         vertical-align: middle;
     }
 
